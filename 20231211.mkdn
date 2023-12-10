@@ -1,0 +1,22 @@
+# Tugas Database
+
+## Objektif
+Buatlah QUERY JOINT SQL dengan 4 Table
+
+## Query
+```
+SELECT
+    C.*,
+    O.*,
+    OL.*,
+    FI.*
+FROM
+    F_CUSTOMERS C
+JOIN
+    F_ORDERS O ON C.ID = O.CUST_ID
+JOIN
+    F_ORDER_LINES OL ON O.ORDER_NUMBER = OL.ORDER_NUMBER
+JOIN
+    F_FOOD_ITEMS FI ON OL.FOOD_ITEM_NUMBER = FI.FOOD_ITEM_NUMBER;
+
+```
